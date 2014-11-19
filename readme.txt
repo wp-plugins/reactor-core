@@ -9,10 +9,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Reactor: Core connects your site to mobile apps built with Reactor: Builder.
 
-reactor.apppresser.com
-
 == Description ==
 Reactor: Core connects your site to mobile apps built with Reactor: Builder. Adds JSON API endpoints to allow custom data in your Reactor powered apps. To utilize this plugin you will need an active account at http://reactor.apppresser.com.
+
+[youtube https://www.youtube.com/watch?v=65L90xeK-4c]
+
+Sign up now and start creating mobile apps for your WordPress sites! http://reactor.apppresser.com
 
 Includes all WP-API endpoints
 Adds /wp-json/reactor/media *this is an endpoint for media galleries
