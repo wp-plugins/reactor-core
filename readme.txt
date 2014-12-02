@@ -30,7 +30,16 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 == Upgrade Notice ==
 
+= 0.0.3 =
+Fix valid plugin header errors upon activation
+
+= 0.0.2 =
+Initial release
 
 == Changelog ==
+
+= 0.0.3 =
+Fix valid plugin header errors upon activation
+
 = 0.0.2 =
 Initial release
