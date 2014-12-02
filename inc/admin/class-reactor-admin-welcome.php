@@ -226,11 +226,11 @@ class Reactor_Admin_Welcome {
 				<div class="reactor-feature feature-rest feature-section col three-col">
 					<div>
 						<h4><?php _e( 'Getting Started', 'reactor' ); ?></h4>
-						<p><?php _e( 'You are ready to start building your app. <a href="reactor.apppresser.com/login/" target="_blank">Login here</a> if you already have an account, otherwise you can <a href="reactor.apppresser.com/pricing/" target="_blank">sign up here</a>.', 'reactor' ); ?></p>
+						<p><?php _e( 'You are ready to start building your app. <a href="http://reactor.apppresser.com/login/" target="_blank">Login here</a> if you already have an account, otherwise you can <a href="http://reactor.apppresser.com/pricing/" target="_blank">sign up here</a>.', 'reactor' ); ?></p>
 					</div>
 					<div class="last-feature">
 						<h4><?php _e( 'Help and Documentation', 'reactor' ); ?></h4>
-						<p><?php _e( 'You will find help videos when you <a href="reactor.apppresser.com/login/" target="_blank">login to your account</a>, or you can find our <a href="http://reactor.helpscoutdocs.com" target="_blank">documentation here</a>.', 'reactor' ); ?></p>
+						<p><?php _e( 'You will find help videos when you <a href="http://reactor.apppresser.com/login/" target="_blank">login to your account</a>, or you can find our <a href="http://reactor.helpscoutdocs.com" target="_blank">documentation here</a>.', 'reactor' ); ?></p>
 					</div>
 				</div>
 			</div>

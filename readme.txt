@@ -29,6 +29,8 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Upgrade Notice ==
+= 0.0.4 =
+Fix url issues in landing page.
 
 = 0.0.3 =
 Fix valid plugin header errors upon activation
@@ -37,6 +39,8 @@ Fix valid plugin header errors upon activation
 Initial release
 
 == Changelog ==
+= 0.0.4 =
+Fix url issues in landing page.
 
 = 0.0.3 =
 Fix valid plugin header errors upon activation
