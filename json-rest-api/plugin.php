@@ -1,12 +1,4 @@
 <?php
-
-/*****************
-*
-* THIS IS A FORKED VERSION OF WP-API TO INCLUDE FIXES THAT ARE NOT IN THE 1.1.1 VERSION
-* IT CONTAINS THE MASTER GITHUB BRANCH
-*
-******************/
-
 /**
  * Plugin Name: JSON REST API
  * Description: JSON-based REST API for WordPress, developed as part of GSoC 2013.
@@ -15,6 +7,13 @@
  * Version: 1.1.2
  * Plugin URI: https://github.com/rmccue/WP-API
  */
+
+/*****************
+*
+* THIS IS A FORKED VERSION OF WP-API TO INCLUDE FIXES THAT ARE NOT IN THE 1.1.1 VERSION
+* IT CONTAINS THE MASTER GITHUB BRANCH
+*
+******************/
 
 /**
  * Version number for our API.
