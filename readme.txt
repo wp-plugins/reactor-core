@@ -42,6 +42,9 @@ Fix valid plugin header errors upon activation
 Initial release
 
 == Changelog ==
+= 0.0.5 =
+Fix woo currency symbol
+
 = 0.0.4 =
 Fix url issues in landing page.
 
