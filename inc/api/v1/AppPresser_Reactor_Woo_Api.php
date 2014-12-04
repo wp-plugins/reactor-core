@@ -66,7 +66,8 @@ if ( !class_exists('Reactor_Woo_API')) {
 				   'sku' =>  $meta['_sku'][0],
 				   'purchase_note' =>  $meta['_purchase_note'][0],
 				   'image_gallery' => $product_images,
-				   'attributes' =>  $product_attributes
+				   'attributes' =>  $product_attributes,
+				   'currency_symbol' => get_woocommerce_currency_symbol()
 
 			    );
 
