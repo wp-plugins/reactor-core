@@ -53,7 +53,7 @@ if ( !class_exists('Reactor_Woo_API')) {
 
 
 			    foreach( $product_image_id as $item ) {
-				    $img_src = wp_get_attachment_image_src( $item, 'thumbnail' );
+				    $img_src = wp_get_attachment_image_src( $item, 'medium' );
 				    $items[]['url'] = $img_src[0];
 			    }
 
