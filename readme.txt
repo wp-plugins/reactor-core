@@ -29,6 +29,9 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Upgrade Notice ==
+- 0.0.6 =
+Bumped up size of woo product thumbnail
+
 = 0.0.5 =
 Fix woo currency symbol
 
