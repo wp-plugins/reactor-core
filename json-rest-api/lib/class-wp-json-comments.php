@@ -72,9 +72,11 @@ class WP_JSON_Comments {
 	 * @param int $id Post ID to retrieve comments for
 	 * @return array List of Comment entities
 	 */
-	public function get_comments( $id ) {
-		//$args = array('status' => $status, 'post_id' => $id, 'offset' => $offset, 'number' => $number )l
-		$comments = get_comments( array('post_id' => $id) );
+	public function get_comments( $id, $status = '', $offset = '', $number = '' ) {
+
+		$args = array('status' => $status, 'post_id' => $id, 'offset' => $offset, 'number' => $number );
+
+		$comments = get_comments( $args );
 
 		$post = get_post( $id, ARRAY_A );
 
