@@ -29,22 +29,15 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Upgrade Notice ==
+
+
+== Changelog ==
+= 0.0.7 =
+add args to API get_comments
+
 = 0.0.6 =
 Bumped up size of woo product thumbnail
 
-= 0.0.5 =
-Fix woo currency symbol
-
-= 0.0.4 =
-Fix url issues in landing page.
-
-= 0.0.3 =
-Fix valid plugin header errors upon activation
-
-= 0.0.2 =
-Initial release
-
-== Changelog ==
 = 0.0.5 =
 Fix woo currency symbol
 
