@@ -44,12 +44,40 @@ if ( !class_exists('Reactor_Woo_API')) {
 		 * @return JSON
 		 */
 		public function product_meta( $post_response, $post, $context ) {
+			global $woocommerce;
 
 			if ( 'product' == get_post_type( $post['ID'] ) ) {
+
 
 			    $meta = get_post_meta( $post['ID'] );
 			    $product_attributes = unserialize( $meta['_product_attributes'][0] );
 			    $product_image_id = explode( ',', $meta['_product_image_gallery'][0] );
+
+
+			    $args = array(
+                     'post_type'     => 'product_variation',
+                     'post_status'   => array( 'private', 'publish' ),
+                     'numberposts'   => -1,
+                     'orderby'       => 'menu_order',
+                     'order'         => 'asc',
+                     'post_parent'   => $post['ID']
+                );
+                $variations = get_posts( $args );
+
+
+                foreach( $variations as $variation ) {
+
+	                foreach( $product_attributes as $attr => $value ){
+		                $terms[$attr] = get_the_terms( $post['ID'], $attr );
+	                }
+
+					$arry['ID'] = absint( $variation->ID );
+					$arry['variation'] = get_post_meta( $variation->ID );
+
+					$variation_data['terms'] = $terms;
+					$variation_data['items'][] = $arry;
+
+			    }
 
 
 			    foreach( $product_image_id as $item ) {
@@ -67,7 +95,10 @@ if ( !class_exists('Reactor_Woo_API')) {
 				   'purchase_note' =>  $meta['_purchase_note'][0],
 				   'image_gallery' => $product_images,
 				   'attributes' =>  $product_attributes,
-				   'currency_symbol' => get_woocommerce_currency_symbol()
+				   'variations' =>  $variation_data,
+				   'currency_symbol' => get_woocommerce_currency_symbol(),
+				   'checkout_url' => $woocommerce->cart->get_checkout_url(),
+				   'cart_url' => $woocommerce->cart->get_cart_url()
 
 			    );
 
@@ -81,3 +112,26 @@ if ( !class_exists('Reactor_Woo_API')) {
 	}
 }
 Reactor_Woo_API::run();
+
+
+function woo_api_add_to_cart() {
+	global $product;
+	reactor_get_template('/templates/woo/add-to-cart/' . $product->product_type . '.php');
+}
+
+
+function woo_cart_messages( $message ) {
+	global $woocommerce;
+
+	if ( isset( $_GET['appp'] ) && $_GET['appp'] === 'woo'  ) {
+
+		$replacemessage = ' ';
+
+		$message = preg_replace('/\<a([^>]*)\>([^<]*)\<\/a\>/i', $replacemessage, $message);
+
+	}
+
+	return $message;
+
+}
+add_filter( 'wc_add_to_cart_message', 'woo_cart_messages');

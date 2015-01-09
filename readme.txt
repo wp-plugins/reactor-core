@@ -2,7 +2,7 @@
 Contributors: apppresser, modemlooper, scottopolis, webdevstudios, williamsba1, messenlehner, lisasabinwilson, tw2113
 Tags: android, android app, App, application, iOS, ios app, iphone app, mobile, mobile app, native app, wordpress mobile
 Requires at least: 3.9
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,9 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Changelog ==
+= 0.0.8 =
+Woo add to cart functionality
+
 = 0.0.7 =
 add args to API get_comments
 
