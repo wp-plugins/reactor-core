@@ -32,6 +32,9 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Changelog ==
+= 0.0.9 =
+Gravity form support
+
 = 0.0.8 =
 Woo add to cart functionality
 
