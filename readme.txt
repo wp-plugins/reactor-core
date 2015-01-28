@@ -32,6 +32,9 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Changelog ==
+= 0.1 =
+remove unused inappbrowser code
+
 = 0.0.9 =
 Gravity form support
 
