@@ -32,6 +32,9 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Changelog ==
+= 0.1.1 =
+add custom featured image sizes for usage in app
+
 = 0.1 =
 remove unused inappbrowser code
 
