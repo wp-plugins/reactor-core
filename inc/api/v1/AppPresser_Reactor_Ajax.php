@@ -20,9 +20,14 @@ function reactor_app_login() {
 		wp_send_json_error( $return );
 
 	} else {
+	
+		$token = $user_signon->ID . '_' . md5( uniqid( rand(), true ) );
+		update_user_meta( $user_signon->ID, 'reactor_token', $token );
 
 		$return = array(
-			'message' => __('Logged in.', 'tm')
+			'message' => __('Logged in.', 'tm'),
+			'token' => $token,
+			'user' => $user_signon->data->user_login
 		);
 		wp_send_json_success( $return );
 
@@ -30,6 +35,7 @@ function reactor_app_login() {
 
 }
 add_action('wp_ajax_nopriv_reactor_app_login', 'reactor_app_login');
+add_action('wp_ajax_reactor_app_login', 'reactor_app_login');
 
 
 function reactor_app_log_out() {

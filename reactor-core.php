@@ -4,11 +4,7 @@ Plugin Name: Reactor: Core
 Plugin URI: http://reactor.apppresser.com
 Description: Core plugin for Reactor App Builder.
 Text Domain: reactor
-<<<<<<< .mine
-Version: 0.1.1
-=======
-Version: 0.1
->>>>>>> .r1083288
+Version: 0.1.2
 Author: Reactor Team
 Author URI: http://reactor.apppresser.com
 License: GPLv2
@@ -31,7 +27,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 
-define( 'REACTOR_CORE_VERSION', '0.1.1' );
+define( 'REACTOR_CORE_VERSION', '0.1.2' );
 define( 'REACTOR_API_VERSION', 'v1' );
 define( 'REACTOR_PLUGIN_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'REACTOR_PLUGIN_URL', trailingslashit( plugins_url( null , __FILE__ ) ) );
@@ -39,7 +35,7 @@ define( 'REACTOR_PLUGIN_URL', trailingslashit( plugins_url( null , __FILE__ ) ) 
 class Reactor_Core {
 
 
-	const VERSION = '0.1.1';
+	const VERSION = '0.1.2';
 	public static $instance = null;
 	public static $dir_path;
 	public static $dir_url;
