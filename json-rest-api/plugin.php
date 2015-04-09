@@ -1,18 +1,19 @@
 <?php
-
-/*****************
-*
-* THIS IS A FORKED VERSION OF WP-API TO INCLUDE FIXES THAT ARE NOT IN THE 1.1.1 VERSION
-* IT CONTAINS THE MASTER GITHUB BRANCH
-*
-******************/
+/**
+ * Plugin Name: WP REST API
+ * Description: JSON-based REST API for WordPress, developed as part of GSoC 2013.
+ * Version: 1.2.1
+ * Author: WP REST API Team
+ * Author URI: http://wp-api.org/
+ * Plugin URI: https://github.com/WP-API/WP-API
+ */
 
 /**
  * Version number for our API.
  *
  * @var string
  */
-define( 'JSON_API_VERSION', '1.1.2' );
+define( 'JSON_API_VERSION', '1.2.1' );
 
 /**
  * Include our files for the API.
@@ -237,7 +238,7 @@ register_deactivation_hook( __FILE__, 'json_api_deactivation' );
  * @see wp_register_scripts()
  */
 function json_register_scripts() {
-	wp_register_script( 'wp-api', 'http://wp-api.github.io/client-js/build/js/wp-api.js', array( 'jquery', 'backbone', 'underscore' ), '1.1', true );
+	wp_register_script( 'wp-api', esc_url_raw( plugins_url( 'wp-api.js', __FILE__ ) ), array( 'jquery', 'backbone', 'underscore' ), '1.1', true );
 
 	$settings = array( 'root' => esc_url_raw( get_json_url() ), 'nonce' => wp_create_nonce( 'wp_json' ) );
 	wp_localize_script( 'wp-api', 'WP_API_Settings', $settings );
