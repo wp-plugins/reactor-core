@@ -32,6 +32,19 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Changelog ==
+= 0.2 =
+wp-api security fix
+
+= 0.1.2 =
+Authentication (login) 
+
+= 0.1.1 =
+add custom featured image sizes for usage in app
+
+>>>>>>> .r1131433
+= 0.1 =
+remove unused inappbrowser code
+
 = 0.0.9 =
 Gravity form support
 

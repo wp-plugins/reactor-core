@@ -77,12 +77,6 @@
 		}
 		</style>
 
-		<script>
-		function = openInAppBrowserBlank( url ){
-			window.open(url, "_blank", "location=no");
-		}
-		</script>
-
 	</head>
 	<body>
 
