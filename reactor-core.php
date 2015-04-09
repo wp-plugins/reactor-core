@@ -4,7 +4,7 @@ Plugin Name: Reactor: Core
 Plugin URI: http://reactor.apppresser.com
 Description: Core plugin for Reactor App Builder.
 Text Domain: reactor
-Version: 0.1
+Version: 0.2
 Author: Reactor Team
 Author URI: http://reactor.apppresser.com
 License: GPLv2
