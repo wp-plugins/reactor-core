@@ -44,7 +44,6 @@ Authentication (login)
 = 0.1.1 =
 add custom featured image sizes for usage in app
 
->>>>>>> .r1131433
 = 0.1 =
 remove unused inappbrowser code
 
