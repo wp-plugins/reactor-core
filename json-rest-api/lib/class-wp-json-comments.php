@@ -72,11 +72,9 @@ class WP_JSON_Comments {
 	 * @param int $id Post ID to retrieve comments for
 	 * @return array List of Comment entities
 	 */
-	public function get_comments( $id, $status = '', $offset = '', $number = '' ) {
-
-		$args = array('status' => $status, 'post_id' => $id, 'offset' => $offset, 'number' => $number );
-
-		$comments = get_comments( $args );
+	public function get_comments( $id ) {
+		//$args = array('status' => $status, 'post_id' => $id, 'offset' => $offset, 'number' => $number )l
+		$comments = get_comments( array('post_id' => $id) );
 
 		$post = get_post( $id, ARRAY_A );
 
@@ -189,7 +187,11 @@ class WP_JSON_Comments {
 		}
 
 		// Date
+		$timezone     = json_get_timezone();
+		$comment_date = WP_JSON_DateTime::createFromFormat( 'Y-m-d H:i:s', $comment->comment_date, $timezone );
+
 		$fields['date']     = json_mysql_to_rfc3339( $comment->comment_date );
+		$fields['date_tz']  = $comment_date->format( 'e' );
 		$fields['date_gmt'] = json_mysql_to_rfc3339( $comment->comment_date_gmt );
 
 		// Meta
