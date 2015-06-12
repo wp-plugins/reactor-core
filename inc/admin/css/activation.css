@@ -1,0 +1,34 @@
+.reactor-message {
+    position: relative;
+    border-left-color: #cc99c2!important;
+    overflow: hidden;
+}
+.reactor-message a.button-primary, p.reactor-actions a.button-primary {
+    background: #0071ae;
+    border-color: #42509d;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 rgba(0, 0, 0, .15);
+    color: #fff;
+    text-decoration: none!important;
+}
+.reactor-message a.button-primary:hover, p.reactor-actions a.button-primary:hover {
+    background: #5da7ce;
+    border-color: #42509d;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 rgba(0, 0, 0, .15);
+}
+.reactor-message a.button-primary:active, p.reactor-actions a.button-primary:active {
+    background: #418fb9;
+    border-color: #42509d;
+}
+.reactor-message a.docs, .reactor-message a.skip, p.reactor-actions a.docs, p.reactor-actions a.skip {
+    opacity: .7;
+}
+.reactor-message .twitter-share-button, p.reactor-actions .twitter-share-button {
+    margin-top: -3px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+.reactor-about-text, p.reactor-actions {
+    margin-bottom: 1em !important;
+}
