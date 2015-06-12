@@ -32,6 +32,9 @@ NOTE: This plugin contains the master branch of JSON API from https://github.com
 
 
 == Changelog ==
+= 0.2.2 =
+fix undefined array in woo api
+
 = 0.2.1 =
 wp-api security fix
 

@@ -52,6 +52,8 @@ if ( !class_exists('Reactor_Woo_API')) {
 			    $meta = get_post_meta( $post['ID'] );
 			    $product_attributes = unserialize( $meta['_product_attributes'][0] );
 			    $product_image_id = explode( ',', $meta['_product_image_gallery'][0] );
+			    $variation_data = array();
+			    $items = array();
 
 
 			    $args = array(
@@ -63,26 +65,32 @@ if ( !class_exists('Reactor_Woo_API')) {
                      'post_parent'   => $post['ID']
                 );
                 $variations = get_posts( $args );
+				
+				if( $variations ) {
 
-
-                foreach( $variations as $variation ) {
-
-	                foreach( $product_attributes as $attr => $value ){
-		                $terms[$attr] = get_the_terms( $post['ID'], $attr );
-	                }
-
-					$arry['ID'] = absint( $variation->ID );
-					$arry['variation'] = get_post_meta( $variation->ID );
-
-					$variation_data['terms'] = $terms;
-					$variation_data['items'][] = $arry;
-
+	                foreach( $variations as $variation ) {
+	
+		                foreach( $product_attributes as $attr => $value ){
+			                $terms[$attr] = get_the_terms( $post['ID'], $attr );
+		                }
+	
+						$arry['ID'] = absint( $variation->ID );
+						$arry['variation'] = get_post_meta( $variation->ID );
+	
+						$variation_data['terms'] = $terms;
+						$variation_data['items'][] = $arry;
+	
+				    }
+			    
 			    }
+				
+				if( $product_image_id ) {
 
-
-			    foreach( $product_image_id as $item ) {
-				    $img_src = wp_get_attachment_image_src( $item, 'medium' );
-				    $items[]['url'] = $img_src[0];
+				    foreach( $product_image_id as $item ) {
+					    $img_src = wp_get_attachment_image_src( $item, 'medium' );
+					    $items[]['url'] = $img_src[0];
+				    }
+				    
 			    }
 
 			    $product_images['images'] = $items;
